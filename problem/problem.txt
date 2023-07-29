@@ -1,0 +1,8 @@
+##############################################################################
+problem:
+    i cant connect with winbox to mikrotik but i can connect with web http !
+
+how i solved:
+    i change winbox port , because in iran sometimes ISP restrict mikrotik default port !!!!!
+
+################################################################################
