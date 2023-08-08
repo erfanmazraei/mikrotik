@@ -2,7 +2,7 @@
 /certificate
 add name=ca-template common-name=erfanmazraei.ir days-valid=3650 key-size=4096 key-usage=crl-sign,key-cert-sign
 add name=server-template common-name=*.erfanmazraei.ir days-valid=3650 key-size=4096 key-usage=digital-signature,key-encipherment,tls-server
-add name=client-template common-name=client.ramtiiin.ir days-valid=3650 key-size=4096 key-usage=tls-client
+add name=client-template common-name=client.erfanmazraei.ir days-valid=3650 key-size=4096 key-usage=tls-client
 
 ## you can put youre common-name instead of erfanmazraei
 
@@ -25,7 +25,7 @@ export-certificate client-certificate export-passphrase=12345678
 
 # then we must create profile for users :
 
-/ppp profile add name="vpn-profile" use-encryption=yes local-address=192.168.250.1 dns-server=8.8.8.8 remote-address=vpn-pool
+/ppp profile add name="vpn-profile" use-encryption=yes local-address=192.168.250.1 dns-server=8.8.8.8 remote-address=Ovpn-pool
 
 # then in winbox , in <PPP>/Secrets/+ u can add new users ( you must select vpn-profile in section of Profile )
 

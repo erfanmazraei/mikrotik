@@ -1,0 +1,46 @@
+step 1 :
+
+transfer cert andkey files from server to this client
+
+step 2 :
+
+import client cert and client key to client router mikrotik
+
+step 3:
+
+click on PPP and create new ovpn client interface and input server information here
+**you must see connected**
+
+step 4:
+
+click on routing an then on tabels :
+create new tabel and mark FIB option
+
+step 5:
+
+click on ip/firewall/mangle :
+create new mangle :
+chain : prerouting
+src: (see ip/addresses/bridgenetwork  with /24)
+dst: !(see ip/addresses/bridgenetwork  with /24)
+in action tab : click on markrouting and then in blow 
+set routing mark on : VPN
+and mark passthrough option
+
+
+step 6:
+
+click on ip/routes 
+add new
+
+Dst : 0.0.0.0/0
+gateway : interface ovpn
+routing table : VPN
+
+step 7 :
+
+click on ip/firewall/nat
+
+and set output interface nothing instead of WAn
+
+
